@@ -9,11 +9,11 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_resp
 
     def show 
         camper = Camper.find(params[:id])
-         render json: camper, status: :not_found #any ID related search you want to use find instead of FInd_by
+        render json: camper, serializer: CamperActivitiesSerializer, status: :not_found #any ID related search you want to use find instead of FInd_by
     end
 
     def create 
-        camper = Camper.create(camper_params)
+        camper = Camper.create!(camper_params)
         render json: camper, status: :created
     end
     

@@ -8,9 +8,10 @@ rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found
 
     def destroy 
         activity = Activity.find(params[:id])
-        Signup.all.Where(`activity_id == #{activity.id}`).destroy
+        # Signup.all.Where(`activity_id == #{activity.id}`).destroy_all
         activtiy.destroy
-        render json: activity, status: :no_content
+        # render json: activity, status: :no_content
+        head :no_content
     end
 
     private

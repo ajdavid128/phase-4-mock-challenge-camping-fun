@@ -3,9 +3,10 @@ class SignupsController < ApplicationController
 
     
     def create 
-        signup = Signup.create(create_params) #passing the method from line 6
+        signup = Signup.create!(create_params) #passing the method from line 6
         render json: signup, status: :created
     end
+    
     private
     def create_params
         params.permit(:camper_id, :activity_id, :time)

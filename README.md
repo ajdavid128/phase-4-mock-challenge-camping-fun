@@ -1,5 +1,7 @@
 # Rails Mock Challenge - Camping Fun
 
+https://www.youtube.com/watch?v=4s2C_8KPnVw - Sam review
+
 Congratulations! You have been hired by Access Camp and for your first job, you
 have been tasked with building out a website to log campers with their
 activities.
